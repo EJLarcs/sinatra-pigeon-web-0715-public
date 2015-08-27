@@ -1,9 +1,23 @@
 <%= erb :'layouts/_header' %>
 
   <h1>Pigeons</h1>
-  
-  <!-- show a table that lists all pigeons here -->
 
+  <tr>
+    <td>Name</td>
+    <td>Color</td>
+    <td>Gender</td>
+    <td>Lives</td>
+
+  </tr>
+  <!-- show a table that lists all pigeons here -->
+  <% Pigeon.all.each do |pigeon| %>
+  <!-- remember that in order to call all instances of the class you MUST use class_name.all -->
+  <td><%= pigeon.name %></td>
+  <td><%= pigeon.color %></td>
+  <td><%= pigeon.gender %></td>
+  <td><%= pigeon.lives %></td>
+
+  <%end%>
   <a class="button" href="/pigeons/new">New Pigeon</a>
-  
+
 <%= erb :'layouts/_footer' %>

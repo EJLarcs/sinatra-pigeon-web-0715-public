@@ -3,5 +3,9 @@
   <img src="http://<%= @pigeon.color.delete("[],\"").split.first %>pigeon.jpg.to/" width="300">
 
   <!-- show attributes for a single pigeon here -->
+  <h1><%= @pigeon.name %></h1>
+  <%= @pigeon.color %>
+  <%= @pigeon.gender %>
+  <%= @pigeon.lives %>
 
 <%= erb :'layouts/_footer' %>
